@@ -1,12 +1,10 @@
-import { createSignal } from "solid-js";
+import Navbar from "./Navbar";
 
 function App() {
-	const [count, setCount] = createSignal(0);
-
 	return (
-		<>
-			<div class="text-9xl">Test</div>
-		</>
+		<div>
+			<Navbar />
+		</div>
 	);
 }
 
