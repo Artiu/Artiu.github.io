@@ -1,7 +1,9 @@
+import { t } from "./language";
+
 export default function MainContent() {
 	return (
 		<main>
-			<p></p>
+			<p>{t("projects")}</p>
 		</main>
 	);
 }

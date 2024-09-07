@@ -1,6 +1,6 @@
 import { createMemo, createSignal } from "solid-js";
 import { enDictionary, plDictionary } from "./dictionary";
-import i18n from "@solid-primitives/i18n";
+import * as i18n from "@solid-primitives/i18n";
 
 type Language = "pl" | "en";
 
@@ -13,9 +13,10 @@ const getInitialLanguage = (): Language => {
 };
 
 const [language, setLanguage] = createSignal<Language>(getInitialLanguage());
-const t = createMemo(() =>
-	i18n.translator(() => i18n.flatten(language() === "pl" ? plDictionary : enDictionary))
+const dictionary = createMemo(() =>
+	i18n.flatten(language() === "pl" ? plDictionary : enDictionary)
 );
+const t = i18n.translator(dictionary);
 
 const updateLanguage = (newLanguage: Language) => {
 	setLanguage(newLanguage);
