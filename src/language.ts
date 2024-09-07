@@ -2,12 +2,17 @@ import { createMemo, createSignal } from "solid-js";
 import { enDictionary, plDictionary } from "./dictionary";
 import * as i18n from "@solid-primitives/i18n";
 
-type Language = "pl" | "en";
+const languages = ["pl", "en"];
+type Language = (typeof languages)[number];
 
 const getInitialLanguage = (): Language => {
 	const lang = localStorage.getItem("language");
-	if (lang === "pl" || lang === "en") {
+	if (lang && languages.includes(lang)) {
 		return lang;
+	}
+	const prefferedLanguage = languages.find((el) => navigator.language.startsWith(el));
+	if (prefferedLanguage) {
+		return prefferedLanguage;
 	}
 	return "pl";
 };
