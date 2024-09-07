@@ -3,18 +3,11 @@ import { theme, toggleTheme } from "./theme";
 
 export default function Navbar() {
 	return (
-		<nav class="flex justify-between">
-			<Logo />
-			<div>
-				<LanguageSwitcher />
-				<ThemeSwitcher />
-			</div>
+		<nav class="flex px-4 py-2 gap-4 justify-end">
+			<LanguageSwitcher />
+			<ThemeSwitcher />
 		</nav>
 	);
-}
-
-function Logo() {
-	return <p>Artur Oborski - Software Developer</p>;
 }
 
 function LanguageSwitcher() {
@@ -39,7 +32,7 @@ function ThemeSwitcher() {
 			/>
 
 			<svg
-				class="swap-on h-10 w-10 fill-current"
+				class="swap-on h-8 w-8 fill-current"
 				xmlns="http://www.w3.org/2000/svg"
 				viewBox="0 0 24 24"
 			>
@@ -47,7 +40,7 @@ function ThemeSwitcher() {
 			</svg>
 
 			<svg
-				class="swap-off h-10 w-10 fill-current"
+				class="swap-off h-8 w-8 fill-current"
 				xmlns="http://www.w3.org/2000/svg"
 				viewBox="0 0 24 24"
 			>

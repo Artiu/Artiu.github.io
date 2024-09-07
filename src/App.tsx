@@ -1,11 +1,13 @@
-import MainContent from "./MainContent";
 import Navbar from "./Navbar";
+import Projects from "./Projects";
 
 function App() {
 	return (
 		<div>
 			<Navbar />
-			<MainContent />
+			<main>
+				<Projects />
+			</main>
 		</div>
 	);
 }
