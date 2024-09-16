@@ -28,12 +28,12 @@ const projects: {
 	},
 	{
 		name: "Rival 650 Battery Tray",
-		description: () => "",
+		description: () => t("projectDescriptions.rivalBatteryTray"),
 		github: "https://github.com/Artiu/rival650-battery-tray",
 	},
 	{
 		name: "Cookery Book",
-		description: () => "",
+		description: () => t("projectDescriptions.cookeryBook"),
 		frontendGithub: "https://github.com/Artiu/cookery-book",
 		link: "https://przepisy.artiu.dev",
 	},

@@ -21,6 +21,7 @@ function GithubLink() {
 				classList={{ invert: theme() === "dark" }}
 				width={24}
 				height={24}
+				alt="github logo"
 			/>
 		</a>
 	);

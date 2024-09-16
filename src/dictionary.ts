@@ -4,7 +4,7 @@ export const plDictionary = {
 	skillsList: [
 		"Aplikacje webowe przy użyciu React/SolidJS'a w TypeScript'cie lub używając samego JS'a",
 		"Wtyczki do przeglądarki",
-		"Backend przy użyciu Go",
+		"Backend przy użyciu Go, Sqlite/Postgres",
 		"Aplikacje desktopowe przy użyciu Tauri'ego i frontendowego frameworku",
 		"Aplikacje konsolowe w Rust-cie",
 		"Aplikacje mobilne przy użyciu Flutter'a",
@@ -15,20 +15,20 @@ export const plDictionary = {
 	projectDescriptions: {
 		ytSync: "",
 		leagueVoice: "",
+		rivalBatteryTray: "",
+		cookeryBook: "",
 	},
 };
 
 export type Dictionary = typeof plDictionary;
 
-// sql i mongo, git, github
-//zmienic opisy seo
 export const enDictionary: Dictionary = {
 	intro: "Artur Oborski",
 	skills: "I make:",
 	skillsList: [
 		"Web apps using React/SolidJS with TypeScript or plain JS",
 		"Browser extensions",
-		"Backend using Go",
+		"Backend using Go, Sqlite/Postgres",
 		"Desktop apps with Tauri and frontend framework",
 		"CLI apps in Rust",
 		"Mobile apps using Flutter",
@@ -39,5 +39,7 @@ export const enDictionary: Dictionary = {
 	projectDescriptions: {
 		ytSync: "I made this extension to watch YouTube with friends. It's made using SolidJS for ",
 		leagueVoice: "",
+		rivalBatteryTray: "",
+		cookeryBook: "",
 	},
 };
