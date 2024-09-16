@@ -7,14 +7,12 @@ function App() {
 	return (
 		<>
 			<Navbar />
-			<main class="p-4">
-				<div class="p-4 mx-auto md:px-8">
-					<div class="flex flex-col gap-2 max-w-lg">
-						<h1 class="text-2xl font-bold text-center mb-2">{t("intro")}</h1>
-						<Skills />
-					</div>
-					<Projects />
+			<main class="p-8 flex flex-col items-center">
+				<div class="flex flex-col gap-2 max-w-lg">
+					<h1 class="text-2xl font-bold text-center mb-2">{t("intro")}</h1>
+					<Skills />
 				</div>
+				<Projects />
 			</main>
 		</>
 	);

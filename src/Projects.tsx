@@ -1,4 +1,5 @@
 import { t } from "./language";
+import { theme } from "./theme";
 
 const projects: {
 	name: string;
@@ -39,11 +40,11 @@ const projects: {
 ];
 export default function Projects() {
 	return (
-		<div class="mt-2 max-w-screen-lg">
+		<div class="mt-2 max-w-screen-xl">
 			<h2 class="text-xl font-semibold mb-2 text-center">{t("projects")}</h2>
-			<div class="grid grid-flow-row">
+			<div class="flex flex-wrap justify-center gap-8">
 				{projects.map((el) => (
-					<div class="card card-compact bg-base-100 w-96 shadow-xl">
+					<div class="card card-compact bg-base-100 max-w-sm w-full shadow-xl">
 						<div class="card-body items-center">
 							{el.photo && (
 								<figure class="h-10">
@@ -52,7 +53,7 @@ export default function Projects() {
 							)}
 							<h2 class="card-title">{el.name}</h2>
 							<p>{el.description()}</p>
-							<div class="card-actions">
+							<div class="card-actions flex flex-wrap justify-center">
 								<GithubLink link={el.github} />
 								<GithubLink link={el.frontendGithub} text="Frontend" />
 								<GithubLink link={el.backendGithub} text="Backend" />
@@ -79,7 +80,13 @@ function GithubLink(props: GithubButtonProps) {
 	if (!props.link) return null;
 	return (
 		<a href={props.link} class="btn btn-primary">
-			<img width={24} height={24} src="/github-logo.png" alt="github logo" />
+			<img
+				width={24}
+				height={24}
+				classList={{ invert: theme() === "light" }}
+				src="/github-logo.png"
+				alt="github logo"
+			/>
 			{props.text ?? ""}
 		</a>
 	);

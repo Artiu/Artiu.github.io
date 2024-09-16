@@ -3,10 +3,26 @@ import { theme, toggleTheme } from "./theme";
 
 export default function Navbar() {
 	return (
-		<nav class="flex px-4 py-2 gap-4 justify-end">
-			<LanguageSwitcher />
-			<ThemeSwitcher />
+		<nav class="flex px-4 py-2 gap-4 justify-between">
+			<GithubLink />
+			<div class="flex gap-4">
+				<LanguageSwitcher />
+				<ThemeSwitcher />
+			</div>
 		</nav>
+	);
+}
+
+function GithubLink() {
+	return (
+		<a href="https://github.com/Artiu" class="btn btn-circle btn-ghost">
+			<img
+				src="/github-logo.png"
+				classList={{ invert: theme() === "dark" }}
+				width={24}
+				height={24}
+			/>
+		</a>
 	);
 }
 
