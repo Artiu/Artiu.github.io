@@ -27,15 +27,16 @@ const projects: {
 		link: "https://league-voice.artiu.dev",
 	},
 	{
-		name: "Rival 650 Battery Tray",
-		description: () => t("projectDescriptions.rivalBatteryTray"),
-		github: "https://github.com/Artiu/rival650-battery-tray",
-	},
-	{
+		photo: "/cookery-book-logo.png",
 		name: "Cookery Book",
 		description: () => t("projectDescriptions.cookeryBook"),
 		frontendGithub: "https://github.com/Artiu/cookery-book",
 		link: "https://przepisy.artiu.dev",
+	},
+	{
+		name: "Rival 650 Battery Tray",
+		description: () => t("projectDescriptions.rivalBatteryTray"),
+		github: "https://github.com/Artiu/rival650-battery-tray",
 	},
 ];
 export default function Projects() {
@@ -47,12 +48,12 @@ export default function Projects() {
 					<div class="card card-compact bg-base-100 max-w-sm w-full shadow-xl">
 						<div class="card-body items-center">
 							{el.photo && (
-								<figure class="h-10">
+								<figure class="size-24">
 									<img src={el.photo} alt={`${el.name} photo`} />
 								</figure>
 							)}
 							<h2 class="card-title">{el.name}</h2>
-							<p>{el.description()}</p>
+							<p class="text-base pb-2">{el.description()}</p>
 							<div class="card-actions flex flex-wrap justify-center">
 								<GithubLink link={el.github} />
 								<GithubLink link={el.frontendGithub} text="Frontend" />
