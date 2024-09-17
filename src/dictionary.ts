@@ -4,7 +4,7 @@ export const plDictionary = {
 	skillsList: [
 		"Aplikacje webowe przy użyciu React/SolidJS'a w TypeScript'cie lub używając samego JS'a z wykorzystaniem Tailwind'a",
 		"Wtyczki do przeglądarki",
-		"Backend przy użyciu Go, Sqlite/Postgres",
+		"Backend przy użyciu Go z pomocą Sqlite'a lub Postgres'a",
 		"Aplikacje desktopowe przy użyciu Tauri'ego i frontendowego frameworku",
 		"Aplikacje konsolowe w Rust-cie",
 		"Aplikacje mobilne przy użyciu Flutter'a",
@@ -31,7 +31,7 @@ export const enDictionary: Dictionary = {
 	skillsList: [
 		"Web apps using React/SolidJS with TypeScript or plain JS and Tailwind",
 		"Browser extensions",
-		"Backend using Go, Sqlite/Postgres",
+		"Backend using Go with Sqlite or Postgres",
 		"Desktop apps with Tauri and frontend framework",
 		"CLI apps in Rust",
 		"Mobile apps using Flutter",
