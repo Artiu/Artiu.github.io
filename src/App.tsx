@@ -2,6 +2,7 @@ import Skills from "./Skills";
 import { t } from "./language";
 import Navbar from "./Navbar";
 import Projects from "./Projects";
+import Footer from "./Footer";
 
 function App() {
 	return (
@@ -14,6 +15,7 @@ function App() {
 				</div>
 				<Projects />
 			</main>
+			<Footer />
 		</>
 	);
 }
