@@ -3,10 +3,11 @@ import { t } from "./language";
 import Navbar from "./Navbar";
 import Projects from "./Projects";
 import Footer from "./Footer";
+import { theme } from "./theme";
 
 function App() {
 	return (
-		<>
+		<div data-theme={theme()}>
 			<Navbar />
 			<main class="p-8 flex flex-col items-center">
 				<div class="flex flex-col gap-2 max-w-lg">
@@ -16,7 +17,7 @@ function App() {
 				<Projects />
 			</main>
 			<Footer />
-		</>
+		</div>
 	);
 }
 
